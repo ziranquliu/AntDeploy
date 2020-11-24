@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Build.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace yuzd.AntDeploy
         {
             try
             {
-                var getmS = Microsoft.Build.Utilities.ToolLocationHelper.GetPathToBuildTools(Microsoft.Build.Utilities.ToolLocationHelper.CurrentToolsVersion);
+                var getmS = ToolLocationHelper.GetPathToBuildTools(ToolLocationHelper.CurrentToolsVersion);
                 return getmS;
             }
             catch (Exception e)
